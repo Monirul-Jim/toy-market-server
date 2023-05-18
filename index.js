@@ -2,14 +2,13 @@ const express = require('express')
 const app = express()
 const cors = require('cors');
 const port = process.env.PORT || 5000;
-
 // middleware
 app.use(cors())
 app.use(express.json())
 
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+    res.send('Hello World!')
 })
 
 
@@ -18,33 +17,50 @@ const uri = "mongodb+srv://Toy-Shop:mIN9QBBr9I4Mdzhg@cluster0.dsd2lyy.mongodb.ne
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
+    serverApi: {
+        version: ServerApiVersion.v1,
+        strict: true,
+        deprecationErrors: true,
+    }
 });
 
 async function run() {
-  try {
-    // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    try {
+        // Connect the client to the server	(optional starting in v4.7)
+        await client.connect();
 
-    const productCollection = client.db('Toy-Shop').collection('gallery');
-    // gallery section photo
-    app.get('/gallery-photo', async (req, res) => {
-        const cursor = productCollection.find();
-        const result = await cursor.toArray();
-        res.send(result);
-    })
+        const productCollection = client.db('Toy-Shop').collection('gallery');
+        const allDataCollection = client.db('Toy-Shop').collection('AllCollection')
 
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    // await client.close();
-  }
+        // gallery section photo
+        app.get('/gallery-photo', async (req, res) => {
+            const cursor = productCollection.find();
+            const result = await cursor.toArray();
+            res.send(result);
+        })
+        app.get('/category-data/:categoryId', async (req, res) => {
+            const categoryId = parseInt(req.params.categoryId);
+          
+            try {
+              const data = await allDataCollection.find({ category_id: categoryId }).toArray();
+              res.send(data);
+            } catch (error) {
+              console.error(error);
+              res.status(500).json({ error: 'An error occurred' });
+            }
+          });
+          
+        
+          
+
+
+        // Send a ping to confirm a successful connection
+        await client.db("admin").command({ ping: 1 });
+        console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    } finally {
+        // Ensures that the client will close when you finish/error
+        // await client.close();
+    }
 }
 run().catch(console.dir);
 
@@ -54,5 +70,5 @@ run().catch(console.dir);
 // mIN9QBBr9I4Mdzhg
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+    console.log(`Example app listening on port ${port}`)
 })
