@@ -31,8 +31,8 @@ async function run() {
         await client.connect();
 
         const productCollection = client.db('Toy-Shop').collection('gallery');
-        const singleDetailsToy = client.db('Toy-Shop').collection('details')
-        const orderCollection=client.db('Toy-Shop').collection('order')
+        const singleDetailsToy = client.db('Toy-Shop').collection('details');
+        const orderCollection = client.db('Toy-Shop').collection('order');
 
         // gallery section photo
         app.get('/gallery-photo', async (req, res) => {
@@ -66,9 +66,20 @@ async function run() {
             const orderData = req.body;
             const result = await orderCollection.insertOne(orderData);
             res.send(result);
-          });
+        });
+        app.get('/my-toys', async (req, res) => {
+            const findData = orderCollection.find();
+            const data = await findData.toArray();
+            res.send(data);
+        })
 
-
+        // here is delete section 
+        app.delete('/my-toys/:id',async(req,res)=>{
+            const id=req.params.id
+            const query={_id: new ObjectId(id)}
+            const result=await orderCollection.deleteOne(query)
+            res.send(result)
+        })
 
 
 
