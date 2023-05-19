@@ -62,10 +62,8 @@ async function run() {
             const result = await singleDetailsToy.findOne(query)
             res.send(result)
         })
-        app.post('/order-collection/:id', async (req, res) => {
-            const id = req.params.id;
+        app.post('/order-collection', async (req, res) => {
             const orderData = req.body;
-            const query = { _id: new ObjectId(id) };
             const result = await orderCollection.insertOne(orderData);
             res.send(result);
           });
