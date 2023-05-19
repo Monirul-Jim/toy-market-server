@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const cors = require('cors');
 const port = process.env.PORT || 5000;
 // middleware
@@ -12,7 +13,7 @@ app.get('/', (req, res) => {
 })
 
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
+
 const uri = "mongodb+srv://Toy-Shop:mIN9QBBr9I4Mdzhg@cluster0.dsd2lyy.mongodb.net/?retryWrites=true&w=majority";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -30,7 +31,7 @@ async function run() {
         await client.connect();
 
         const productCollection = client.db('Toy-Shop').collection('gallery');
-        const allDataCollection = client.db('Toy-Shop').collection('AllCollection')
+        const singleDetailsToy = client.db('Toy-Shop').collection('details')
 
         // gallery section photo
         app.get('/gallery-photo', async (req, res) => {
@@ -40,18 +41,29 @@ async function run() {
         })
         app.get('/category-data/:categoryId', async (req, res) => {
             const categoryId = parseInt(req.params.categoryId);
-          
+
             try {
-              const data = await allDataCollection.find({ category_id: categoryId }).toArray();
-              res.send(data);
+                const data = await singleDetailsToy.find({ category_id: categoryId }).toArray();
+                res.send(data);
             } catch (error) {
-              console.error(error);
-              res.status(500).json({ error: 'An error occurred' });
+                console.error(error);
+                res.status(500).json({ error: 'An error occurred' });
             }
-          });
-          
-        
-          
+        });
+
+        app.get('/single-toy/:id', async (req, res) => {
+            const id = req.params.id
+            const query = { _id: new ObjectId(id) }
+
+            // const options = {
+            //     projection: { _id: 1, Picture: 1, Name: 1, Price: 1, Rating: 1, description: 1,battery_backup:1, battery_backup:1 },
+            // };
+            const result = await singleDetailsToy.findOne(query)
+            res.send(result)
+        })
+
+
+
 
 
         // Send a ping to confirm a successful connection

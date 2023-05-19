@@ -1,146 +1,272 @@
 [
-  {
-    "id":"1",
-    "category_id": "1",
-    "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRLzDR9vvors6hjrhZI18z-90Qg-oK3V_OhrF7AcmJmOLfEnQL7aszeDJ79kY1J2tW3-s&usqp=CAU",
-    "Name": "Remote Car",
-    "Price": 9.99,
-    "Rating": 4.5
-  },
-  {
-    "id":"1",
-    "category_id": "2",
-    "Picture": "https://media.4rgos.it/s/Argos/8863232_R_SET?$Main768$&w=620&h=620",
-    "Name": "Super SUV",
-    "Price": 14.99,
-    "Rating": 3.8
-  },
-  {
-    "id":"3",
-    "category_id": "1",
-    "Picture": "https://images-cdn.ubuy.com.sa/633ac8d6fcdbb331ed321531-rastar-rc-car-1-24-bugatti-veyron-16-4.jpg",
-    "Name": "Bugatti Veyron",
-    "Price": 19.99,
-    "Rating": 4.2
-  },
-  {
-    "id":"4",
-    "category_id": "1",
-    "Picture": "https://i.ytimg.com/vi/3V3LwOg3VPs/maxresdefault.jpg",
-    "Name": "Racing Car",
-    "Price": 7.99,
-    "Rating": 4.1
-  },
-  {
-    "id":"5",
-    "category_id": "1",
-    "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTURINxn7N7EWOembhFD-k34dCYJCT5LFGw-KCga1bBSE3JSC-wSmEFYjg_gtpG2jKH5NY&usqp=CAU",
-    "Name": "Super Racing Car",
-    "Price": 12.99,
-    "Rating": 4.7
-  },
-  {
-    "id":"6",
-    "category_id": "1",
-    "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWFGr1s4wJs1u51Nq2GKAFWe3IpEb3LUxhDAtIgx_rQ4DYn38A3QfVK6zavZRT8KBncQA&usqp=CAU",
-    "Name": "Lamborghini",
-    "Price": 24.99,
-    "Rating": 4.9
-  },
-  {
-    "id":"7",
-    "category_id": "2",
-    "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScDBTujGJSvGP_B9QkCVXDNS-9GCaSYjY6pYcX6TDZ6-haTVfxlkI_PtjLvEQjDWaFYRA&usqp=CAU",
-    "Name": "Mini Fire Truck",
-    "Price": 15.99,
-    "Rating": 3.5
-  },
-  {
-    "id":"8",
-    "category_id": "2",
-    "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjI6cBCGJX0Kz8RXGGJ_mCXznM4dPiGrNsZbzE2yNA_QUJ7800-trHBxz3AJZFvwDgE-s&usqp=CAU",
-    "Name": "Fire Truck ",
-    "Price": 17.99,
-    "Rating": 4.3
-  },
-  {
-    "id":"9",
-    "category_id": "2",
-    "Picture": "https://rukminim1.flixcart.com/image/416/416/kl6wx3k0/vehicle-pull-along/l/9/o/1-32-scale-mini-fire-brigade-engine-truck-friction-powered-original-imagydedejkehrf8.jpeg?q=70",
-    "Name": "Fire Brigade",
-    "Price": 11.99,
-    "Rating": 4.6
-  },
-  {
-    "id":"10",
-    "category_id": "2",
-    "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1gSH0J0xb6cID3zKDwipshSrFpJtAl6lv7aVRuFAWGD5Itou_9tZY32SWf8_TmhtBqiI&usqp=CAU",
-    "Name": "Exclusive Fire Truck",
-    "Price": 6.99,
-    "Rating": 3.9
-  },
-  {
-    "id":"11",
-    "category_id": "2",
-    "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShBfUe8CINtB6oAAdGud5tW1ucEKfd0WRGYWV40stq8aWD0RRiVbrkeoPVjehlNgKITgs&usqp=CAU",
-    "Name": "Fire Monster",
-    "Price": 21.99,
-    "Rating": 4.8
-  },
-  {
-    "id":"12",
-    "category_id": "2",
-    "Picture": "https://i.ytimg.com/vi/P2sv9XuoM1c/maxresdefault.jpg",
-    "Name": "Truck With Cane",
-    "Price": 13.99,
-    "Rating": 4.4
-  },
-  {
-    "id":"13",
-    "category_id": "3",
-    "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFFg7Par7M7TtqqLDlmz-Xhl_ASNON6ItwxPJzNBM3KHRLfjU7wLsljjWEmG7nuN33ox8&usqp=CAU",
-    "Name": "Police Car",
-    "Price": 13.99,
-    "Rating": 4.4
-  },
-  {
-    "id":"14",
-    "category_id": "3",
-    "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ85j9jB8QPwo47aY459HPHbszrviI6NnUKyDIO4kHOl_6soBMj6dCfxAQo_pkA7Od1jyQ&usqp=CAU",
-    "Name": "Police Truck",
-    "Price": 13.99,
-    "Rating": 4.4
-  },
-  {
-    "id":"15",
-    "category_id": "3",
-    "Picture": "https://m.media-amazon.com/images/I/51yK4zAT7OL._SL1002_.jpg",
-    "Name": "White Police Truck",
-    "Price": 13.99,
-    "Rating": 4.4
-  },
-  {
-    "id":"16",
-    "category_id": "3",
-    "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGPGfzfYXz3YK-GZWNbFpHh-RXCZRxV3JKRk6uE0cqP-GneKWoj-F4FBortHxSakNUUfY&usqp=CAU",
-    "Name": "Police Lamborghini",
-    "Price": 13.99,
-    "Rating": 4.4
-  },
-  {
-    "id":"17",
-    "category_id": "3",
-    "Picture": "https://images-na.ssl-images-amazon.com/images/I/81lN7azu-aL._SS400_.jpg",
-    "Name": "Police SUV",
-    "Price": 13.99,
-    "Rating": 4.4
-  },
-  {
-    "id":"18",
-    "category_id": "3",
-    "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShV0WyRwwtHt7NctIj1zGVg66qAG0vEkdNLtc49S1m5B3g4mv9jyss3jqNEtlXL3kqdaM&usqp=CAU",
-    "Name": "Police Super Car",
-    "Price": 13.99,
-    "Rating": 4.4
-  }
+    {
+        "category_id": 1,
+        "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRLzDR9vvors6hjrhZI18z-90Qg-oK3V_OhrF7AcmJmOLfEnQL7aszeDJ79kY1J2tW3-s&usqp=CAU",
+        "Name": "Remote Car",
+        "Price": 9.99,
+        "Rating": 4.5,
+        "Description": "The Remote Car is a fun and interactive toy that provides hours of entertainment for kids and adults alike. It features a sleek design and smooth controls for easy maneuverability.",
+        "Features": [
+            "Remote-controlled operation",
+            "Sleek and stylish design",
+            "Easy-to-use controls",
+            "Durable construction"
+        ],
+        "battery_backup": "The Remote Car comes with a rechargeable battery that provides a backup of up to 2 hours of continuous playtime. It can be easily recharged using the included USB cable, ensuring uninterrupted fun."
+    },
+    {
+        "category_id": 1,
+        "Picture": "https://media.4rgos.it/s/Argos/8863232_R_SET?$Main768$&w=620&h=620",
+        "Name": "Super SUV",
+        "Price": 14.99,
+        "Rating": 3.8,
+        "Description": "The Super SUV is a powerful and versatile toy vehicle that provides endless hours of fun. It is designed for both indoor and outdoor play, making it perfect for adventurous kids.",
+        "Features": [
+            "Durable construction for long-lasting play",
+            "Realistic design with detailed interior and exterior",
+            "Smooth wheels for easy maneuverability",
+            "Compatible with other toy car sets for extended play options"
+        ],
+        "battery_backup": "The Super SUV is powered by two AA batteries (not included) and offers a reliable and long-lasting battery backup for extended playtime."
+    },
+    {
+        "category_id": 1,
+        "Picture": "https://images-cdn.ubuy.com.sa/633ac8d6fcdbb331ed321531-rastar-rc-car-1-24-bugatti-veyron-16-4.jpg",
+        "Name": "Bugatti Veyron",
+        "Price": 19.99,
+        "Rating": 4.2,
+        "description": "The Bugatti Veyron is a high-performance sports car known for its exceptional speed and luxurious design.",
+        "Features": [
+            "Powerful engine",
+            "Aerodynamic body",
+            "Advanced suspension system",
+            "Luxurious interior"
+        ],
+        "battery_backup": "The Bugatti Veyron is not an electric vehicle and does not have a battery backup as it relies on a traditional combustion engine."
+    },
+    {
+        "category_id": 1,
+        "Picture": "https://i.ytimg.com/vi/3V3LwOg3VPs/maxresdefault.jpg",
+        "Name": "Racing Car",
+        "Price": 7.99,
+        "Rating": 4.1,
+        "description": "Experience high-speed racing with this sleek and powerful toy car. It's designed for ultimate performance and fun.",
+        "Features": [
+            "1:24 scale",
+            "realistic design",
+            "working headlights and taillights",
+            "easy maneuverability",
+            "durable construction"
+        ],
+        "battery_backup": "Provides up to 1 hour of continuous playtime with its rechargeable battery."
+    },
+    {
+        "category_id": 1,
+        "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTURINxn7N7EWOembhFD-k34dCYJCT5LFGw-KCga1bBSE3JSC-wSmEFYjg_gtpG2jKH5NY&usqp=CAU",
+        "Name": "Super Racing Car",
+        "Price": 12.99,
+        "Rating": 4.7,
+        "Description": "Experience the thrill of high-speed racing with this Super Racing Car. It is designed to deliver an exciting and immersive playtime for kids.",
+        "Features": [
+            "Realistic design",
+            "fast speed",
+            "durable construction"
+        ],
+        "battery_backup": "Long-lasting battery for extended playtime"
+    },
+    {
+        "category_id": 1,
+        "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWFGr1s4wJs1u51Nq2GKAFWe3IpEb3LUxhDAtIgx_rQ4DYn38A3QfVK6zavZRT8KBncQA&usqp=CAU",
+        "Name": "Lamborghini",
+        "Price": 24.99,
+        "Rating": 4.9,
+        "description": "A toy car modeled after the iconic Lamborghini sports car.",
+        "Features": [
+            "Realistic design",
+            "functioning doors",
+            "LED lights",
+            "detailed interior"
+        ],
+        "battery_backup": "Long-lasting battery for extended playtime."
+    },
+    {
+        "category_id": 2,
+        "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScDBTujGJSvGP_B9QkCVXDNS-9GCaSYjY6pYcX6TDZ6-haTVfxlkI_PtjLvEQjDWaFYRA&usqp=CAU",
+        "Name": "Mini Fire Truck",
+        "Price": 15.99,
+        "Rating": 3.5,
+        "Description": "The Mini Fire Truck is a compact and realistic toy car designed to resemble a fire truck. It provides endless hours of imaginative play and is perfect for young aspiring firefighters.",
+        "battery_backup": "The Mini Fire Truck is powered by two AA batteries (not included) that provide long-lasting playtime.",
+        "Features": [
+            "Realistic fire truck design",
+            "Working lights and siren",
+            "Moveable ladder",
+            "Durable construction",
+            "Easy-grip handle for young children"
+        ]
+    },
+    {
+        "category_id": 2,
+        "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjI6cBCGJX0Kz8RXGGJ_mCXznM4dPiGrNsZbzE2yNA_QUJ7800-trHBxz3AJZFvwDgE-s&usqp=CAU",
+        "Name": "Fire Truck ",
+        "Price": 17.99,
+        "Rating": 4.3,
+        "description": "A toy fire truck with realistic features and vibrant colors.",
+        "battery_backup": "Long-lasting battery for extended playtime",
+        "Features": [
+            "Working sirens and lights",
+            "Extendable ladder",
+            "Water spraying function"
+        ]
+    },
+    {
+        "category_id": 2,
+        "Picture": "https://rukminim1.flixcart.com/image/416/416/kl6wx3k0/vehicle-pull-along/l/9/o/1-32-scale-mini-fire-brigade-engine-truck-friction-powered-original-imagydedejkehrf8.jpeg?q=70",
+        "Name": "Fire Brigade",
+        "Price": 11.99,
+        "Rating": 4.6,
+        "description": "The Fire Brigade Truck is a high-performance sports car known for its exceptional speed and luxurious design.",
+        "features": [
+            "Powerful engine",
+            "Aerodynamic body",
+            "Advanced suspension system",
+            "Luxurious interior"
+        ],
+        "battery_backup": "The fire brigade truck  is not an electric vehicle and does not have a battery backup as it relies on a traditional combustion engine."
+    },
+    {
+        "category_id": 2,
+        "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1gSH0J0xb6cID3zKDwipshSrFpJtAl6lv7aVRuFAWGD5Itou_9tZY32SWf8_TmhtBqiI&usqp=CAU",
+        "Name": "Exclusive Fire Truck",
+        "Price": 6.99,
+        "Rating": 3.9,
+        "Description": "The Exclusive Fire Truck is a fun and interactive toy that provides hours of entertainment for kids and adults alike. It features a sleek design and smooth controls for easy maneuverability.",
+        "Features": [
+            "Remote-controlled operation",
+            "Sleek and stylish design",
+            "Easy-to-use controls",
+            "Durable construction"
+        ],
+        "battery_backup": "The Exclusive Fire Truck comes with a rechargeable battery that provides a backup of up to 2 hours of continuous playtime. It can be easily recharged using the included USB cable, ensuring uninterrupted fun."
+    },
+    {
+        "category_id": 2,
+        "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShBfUe8CINtB6oAAdGud5tW1ucEKfd0WRGYWV40stq8aWD0RRiVbrkeoPVjehlNgKITgs&usqp=CAU",
+        "Name": "Fire Monster",
+        "Price": 21.99,
+        "Rating": 4.8,
+        "description": "Fire Monster with realistic features and vibrant colors.",
+        "battery_backup": "Long-lasting battery for extended playtime",
+        "Features": [
+            "Working sirens and lights",
+            "Extendable ladder",
+            "Water spraying function"
+        ]
+    },
+    {
+        "category_id": 2,
+        "Picture": "https://i.ytimg.com/vi/P2sv9XuoM1c/maxresdefault.jpg",
+        "Name": "Truck With Cane",
+        "Price": 13.99,
+        "Rating": 4.4,
+        "Description": "The Truck With Cane - Truck is a fun and interactive toy that provides hours of entertainment for kids and adults alike. It features a sleek design and smooth controls for easy maneuverability.",
+        "Features": [
+            "Remote-controlled operation",
+            "Sleek and stylish design",
+            "Easy-to-use controls",
+            "Durable construction"
+        ],
+        "battery_backup": "The Truck With Cane comes with a rechargeable battery that provides a backup of up to 2 hours of continuous playtime. It can be easily recharged using the included USB cable, ensuring uninterrupted fun."
+    },
+    {
+        "category_id": 3,
+        "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFFg7Par7M7TtqqLDlmz-Xhl_ASNON6ItwxPJzNBM3KHRLfjU7wLsljjWEmG7nuN33ox8&usqp=CAU",
+        "Description": "A realistic toy police car with lights and siren sounds.",
+        "battery_backup": "2 hours",
+        "Features": [
+            "Realistic police car design",
+            "Working lights and siren",
+            "Durable construction",
+            "Easy to operate",
+            "Suitable for indoor and outdoor play"
+        ]
+    },
+    {
+        "category_id": 3,
+        "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ85j9jB8QPwo47aY459HPHbszrviI6NnUKyDIO4kHOl_6soBMj6dCfxAQo_pkA7Od1jyQ&usqp=CAU",
+        "Name": "Police Truck",
+        "Price": 13.99,
+        "Rating": 4.4,
+        "description": "The Police Truck toy car is a thrilling addition to any playtime adventure. With its sleek design and realistic features, kids can imagine themselves patrolling the streets and catching the bad guys.",
+        "battery_backup": true,
+        "Features": [
+            "Working headlights",
+            "Siren sound effects",
+            "Opening doors",
+            "Detachable roof",
+            "Rubber tires for smooth movement"
+        ]
+    },
+    {
+        "category_id": 3,
+        "Picture": "https://m.media-amazon.com/images/I/51yK4zAT7OL._SL1002_.jpg",
+        "Name": "White Police Truck",
+        "Price": 13.99,
+        "Rating": 4.4,
+        "description": "This toy car is a white police truck, perfect for imaginative play and role-playing scenarios.",
+        "battery_backup": true,
+        "Features": [
+            "Working sirens and lights",
+            "Realistic police design",
+            "Durable construction"
+        ]
+    },
+    {
+        "category_id": 3,
+        "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGPGfzfYXz3YK-GZWNbFpHh-RXCZRxV3JKRk6uE0cqP-GneKWoj-F4FBortHxSakNUUfY&usqp=CAU",
+        "Name": "Police Lamborghini",
+        "Price": 13.99,
+        "Rating": 4.4,
+        "description": "The Police Lamborghini toy car is a stylish and fast vehicle that will excite young car enthusiasts. It features sleek design elements inspired by real Lamborghini cars.",
+        "battery_backup": "The Police Lamborghini toy car comes with a rechargeable battery that provides extended playtime for uninterrupted fun.",
+        "Features": [
+            "Realistic design with detailed interior and exterior",
+            "Working LED lights and sirens for a realistic police experience",
+            "Easy-to-use remote control for smooth maneuvering",
+            "Durable construction to withstand rough play",
+            "Multiple speed options for adjustable driving experience"
+        ]
+    },
+    {
+        "category_id": 3,
+        "Picture": "https://images-na.ssl-images-amazon.com/images/I/81lN7azu-aL._SS400_.jpg",
+        "Name": "Police SUV",
+        "Price": 13.99,
+        "Rating": 4.4,
+        "description": "A toy police SUV car that kids will love playing with.",
+        "battery_backup": "2 hours and also rechargeable",
+        "Features": [
+            "Working headlights",
+            "Realistic sirens and lights",
+            "Opening doors",
+            "Remote control functionality"
+        ]
+    },
+    {
+        "category_id": 3,
+        "Picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShV0WyRwwtHt7NctIj1zGVg66qAG0vEkdNLtc49S1m5B3g4mv9jyss3jqNEtlXL3kqdaM&usqp=CAU",
+        "Name": "Police Super Car",
+        "Price": 13.99,
+        "Rating": 4.4,
+        "description": "The Police Super Car is a high-performance toy car designed for young enthusiasts. It features a sleek and realistic design that mimics a real police car. With its vibrant colors and attention to detail, this toy car provides endless hours of imaginative play for children.",
+        "battery_backup": "The Police Super Car is powered by two AA batteries (not included), providing long-lasting fun and excitement.",
+        "Features": [
+            "Sleek and realistic design",
+            "Vibrant colors",
+            "High-performance",
+            "Endless hours of imaginative play",
+            "Easy to operate",
+            "Durable construction"
+        ]
+    }
 ]
