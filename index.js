@@ -32,6 +32,7 @@ async function run() {
 
         const productCollection = client.db('Toy-Shop').collection('gallery');
         const singleDetailsToy = client.db('Toy-Shop').collection('details')
+        const orderCollection=client.db('Toy-Shop').collection('order')
 
         // gallery section photo
         app.get('/gallery-photo', async (req, res) => {
@@ -61,6 +62,13 @@ async function run() {
             const result = await singleDetailsToy.findOne(query)
             res.send(result)
         })
+        app.post('/order-collection/:id', async (req, res) => {
+            const id = req.params.id;
+            const orderData = req.body;
+            const query = { _id: new ObjectId(id) };
+            const result = await orderCollection.insertOne(orderData);
+            res.send(result);
+          });
 
 
 
