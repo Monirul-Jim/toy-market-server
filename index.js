@@ -55,10 +55,6 @@ async function run() {
         app.get('/single-toy/:id', async (req, res) => {
             const id = req.params.id
             const query = { _id: new ObjectId(id) }
-
-            // const options = {
-            //     projection: { _id: 1, Picture: 1, Name: 1, Price: 1, Rating: 1, description: 1,battery_backup:1, battery_backup:1 },
-            // };
             const result = await singleDetailsToy.findOne(query)
             res.send(result)
         })
@@ -67,6 +63,12 @@ async function run() {
             const result = await orderCollection.insertOne(orderData);
             res.send(result);
         });
+
+        app.get('/order-collection', async (req, res) => {
+            const getData = orderCollection.find();
+            const totalData = await getData.toArray();
+            res.send(totalData);
+        })
         app.get('/my-toys', async (req, res) => {
             const findData = orderCollection.find();
             const data = await findData.toArray();
@@ -78,6 +80,21 @@ async function run() {
             const id=req.params.id
             const query={_id: new ObjectId(id)}
             const result=await orderCollection.deleteOne(query)
+            res.send(result)
+        })
+        app.put('/update-toy-collection/:id',async(req,res)=>{
+            const id=req.params.id
+            const filter={_id: new ObjectId(id)}
+            const options={ upsert:true}
+            const updateToys=req.body
+            const toys={
+                $set:{
+                    quantity: updateToys.quantity,
+                    price:updateToys.price,
+                    description:updateToys.description,
+                }
+            }
+            const result=await orderCollection.updateOne(filter,toys,options)
             res.send(result)
         })
 
