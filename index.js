@@ -98,7 +98,16 @@ async function run() {
             res.send(result)
         })
 
-
+        app.get('/order-collection/:text',async(req,res)=>{
+            const searchText=req.params.text
+            const result= await orderCollection.find({
+                $or:[
+                   { name: { $regex: searchText, $options: 'i' }}
+                ],
+            })
+            .toArray();
+            res.send(result)
+        })
 
         // Send a ping to confirm a successful connection
         await client.db("admin").command({ ping: 1 });
