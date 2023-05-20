@@ -12,7 +12,10 @@ app.use(express.json())
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
-
+// git rm -r --cached .env
+// git add .
+// git commit -m"cached node_modules"
+// git push
 
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.dsd2lyy.mongodb.net/?retryWrites=true&w=majority`;
@@ -69,6 +72,12 @@ async function run() {
             const getData = orderCollection.find();
             const totalData = await getData.toArray();
             res.send(totalData);
+        })
+        app.get('/order-collection/:id', async (req, res) => {
+            const id = req.params.id
+            const query = { _id: new ObjectId(id) }
+            const result = await orderCollection.findOne(query)
+            res.send(result)
         })
         app.get('/my-toys', async (req, res) => {
             const findData = orderCollection.find();
