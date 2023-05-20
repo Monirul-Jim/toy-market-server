@@ -5,8 +5,15 @@ const cors = require('cors');
 require('dotenv').config()
 const port = process.env.PORT || 5000;
 // middleware
-app.use(cors())
+const corsOptions ={
+    origin:'*', 
+    credentials:true,    
+    optionSuccessStatus:200,
+ }
+ app.use(cors(corsOptions))
 app.use(express.json())
+
+
 
 
 app.get('/', (req, res) => {
@@ -114,14 +121,10 @@ async function run() {
             res.send(result)
         })
 
-        app.get('/order-collection/:text',async(req,res)=>{
-            const searchText=req.params.text
-            const result= await orderCollection.find({
-                $or:[
-                   { name: { $regex: searchText, $options: 'i' }}
-                ],
-            })
-            .toArray();
+        app.get('/order-collect',async(req,res)=>{
+        const result=await orderCollection.find({name:req.query.text}).toArray()
+
+            console.log(result);
             res.send(result)
         })
 
