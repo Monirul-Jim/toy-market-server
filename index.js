@@ -5,12 +5,12 @@ const cors = require('cors');
 require('dotenv').config()
 const port = process.env.PORT || 5000;
 // middleware
-const corsOptions ={
-    origin:'*', 
-    credentials:true,    
-    optionSuccessStatus:200,
- }
- app.use(cors(corsOptions))
+const corsOptions = {
+    origin: '*',
+    credentials: true,
+    optionSuccessStatus: 200,
+}
+app.use(cors(corsOptions))
 app.use(express.json())
 
 
@@ -75,10 +75,18 @@ async function run() {
             res.send(result);
         });
 
+        // app.get('/order-collection', async (req, res) => {
+        //     const getData = orderCollection.find().limit(20);
+        //     const totalData = await getData.toArray();
+        //     res.send(totalData);
+        // })
         app.get('/order-collection', async (req, res) => {
-            const getData = orderCollection.find();
-            const totalData = await getData.toArray();
-            res.send(totalData);
+            let query = {}
+            if (req.query?.email) {
+                query = { email: req.query.email }
+            }
+            const result = await orderCollection.find(query).toArray()
+            res.send(result)
         })
         app.get('/order-collection/:id', async (req, res) => {
             const id = req.params.id
@@ -93,25 +101,25 @@ async function run() {
         })
 
         // here is delete section 
-        app.delete('/my-toys/:id',async(req,res)=>{
-            const id=req.params.id
-            const query={_id: new ObjectId(id)}
-            const result=await orderCollection.deleteOne(query)
+        app.delete('/my-toys/:id', async (req, res) => {
+            const id = req.params.id
+            const query = { _id: new ObjectId(id) }
+            const result = await orderCollection.deleteOne(query)
             res.send(result)
         })
-        app.put('/update-toy-collection/:id',async(req,res)=>{
-            const id=req.params.id
-            const filter={_id: new ObjectId(id)}
-            const options={ upsert:true}
-            const updateToys=req.body
-            const toys={
-                $set:{
+        app.put('/update-toy-collection/:id', async (req, res) => {
+            const id = req.params.id
+            const filter = { _id: new ObjectId(id) }
+            const options = { upsert: true }
+            const updateToys = req.body
+            const toys = {
+                $set: {
                     quantity: updateToys.quantity,
-                    price:updateToys.price,
-                    description:updateToys.description,
+                    price: updateToys.price,
+                    description: updateToys.description,
                 }
             }
-            const result=await orderCollection.updateOne(filter,toys,options)
+            const result = await orderCollection.updateOne(filter, toys, options)
             res.send(result)
         })
         app.get('/update-toy-collection/:id', async (req, res) => {
@@ -120,13 +128,17 @@ async function run() {
             const result = await orderCollection.findOne(query)
             res.send(result)
         })
-
-        app.get('/order-collect',async(req,res)=>{
-        const result=await orderCollection.find({name:req.query.text}).toArray()
-
-            console.log(result);
+        app.get('/order/:text', async (req, res) => {
+            const searchText = req.params.text
+            const result = await orderCollection.find({
+                $or: [
+                    { name: { $regex: searchText, $options: "i" } }
+                ],
+            }).toArray()
             res.send(result)
         })
+
+
 
         // Send a ping to confirm a successful connection
         await client.db("admin").command({ ping: 1 });
