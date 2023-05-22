@@ -95,7 +95,7 @@ async function run() {
             res.send(result)
         })
         app.get('/my-toys', async (req, res) => {
-            const findData = orderCollection.find();
+            const findData = orderCollection.find().limit(20);
             const data = await findData.toArray();
             res.send(data);
         })
